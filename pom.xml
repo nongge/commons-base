@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>cn.pinkhorizon</groupId>
+    <artifactId>commons-base</artifactId>
+    <version>1.0.0</version>
+
+    <properties>
+        <jackson.version>2.11.3</jackson.version>
+    </properties>
+
+    <dependencies>
+        <!--jackson序列化忽略空属性-->
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-databind</artifactId>
+            <version>${jackson.version}</version>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <!-- 要将源码放上去，需要加入这个插件 -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-source-plugin</artifactId>
+                <version>3.2.1</version>
+                <configuration>
+                    <attach>true</attach>
+                </configuration>
+                <executions>
+                    <execution>
+                        <phase>compile</phase>
+                        <goals>
+                            <goal>jar</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+
+    <distributionManagement>
+        <repository>
+            <id>nexus</id>
+            <url>http://localhost:10000/repository/maven-releases/</url>
+        </repository>
+    </distributionManagement>
+
+    <!--
+        <server>
+          <id>${server}</id>
+          <username>cQ8/sOv2</username>
+          <password>QrrzwlA0DNM6JkzzvW+nt5MQVjGLrcbxJezHDs13NWlV</password>
+        </server>
+    -->
+</project>
