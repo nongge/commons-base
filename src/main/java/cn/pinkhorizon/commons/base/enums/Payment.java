@@ -1,6 +1,6 @@
 package cn.pinkhorizon.commons.base.enums;
 
-import cn.pinkhorizon.commons.base.exception.ParamInvalidException;
+import cn.pinkhorizon.commons.base.exception.ParamAnomalousException;
 
 /**
  * @author 袁彬峰
@@ -50,6 +50,6 @@ public enum Payment {
                 return e;
             }
         }
-        throw new ParamInvalidException("invalid enum type for " + Payment.class + "：" + type);
+        throw new ParamAnomalousException("anomalous enum type for " + Payment.class + "：" + type);
     }
 }

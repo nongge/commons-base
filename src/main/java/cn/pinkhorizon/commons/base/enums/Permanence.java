@@ -1,5 +1,6 @@
 package cn.pinkhorizon.commons.base.enums;
 
+import cn.pinkhorizon.commons.base.exception.ParamAnomalousException;
 import cn.pinkhorizon.commons.base.exception.ParamInvalidException;
 
 /**
@@ -42,6 +43,6 @@ public enum Permanence {
                 return e;
             }
         }
-        throw new ParamInvalidException("invalid enum type for " + Permanence.class + "：" + type);
+        throw new ParamAnomalousException("anomalous enum type for " + Permanence.class + "：" + type);
     }
 }

@@ -7,7 +7,7 @@ package cn.pinkhorizon.commons.base.exception;
 public class UnknownException extends RuntimeException{
 
     public UnknownException() {
-        super("系统网络异常");
+        super("系统异常");
     }
 
     public UnknownException(String message) {

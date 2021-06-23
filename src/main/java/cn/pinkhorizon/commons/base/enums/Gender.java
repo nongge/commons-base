@@ -1,6 +1,6 @@
 package cn.pinkhorizon.commons.base.enums;
 
-import cn.pinkhorizon.commons.base.exception.ParamInvalidException;
+import cn.pinkhorizon.commons.base.exception.ParamAnomalousException;
 
 /**
  * @author ybf
@@ -43,6 +43,6 @@ public enum Gender {
                 return e;
             }
         }
-        throw new ParamInvalidException("invalid enum type for " + Gender.class + "：" + type);
+        throw new ParamAnomalousException("anomalous enum type for " + Gender.class + "：" + type);
     }
 }

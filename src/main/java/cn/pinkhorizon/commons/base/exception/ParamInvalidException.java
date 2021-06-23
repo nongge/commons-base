@@ -7,7 +7,7 @@ package cn.pinkhorizon.commons.base.exception;
 public class ParamInvalidException extends RuntimeException {
 
     public ParamInvalidException() {
-        super("无效的参数");
+        super("无效参数");
     }
 
     public ParamInvalidException(String message) {

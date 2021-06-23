@@ -1,6 +1,6 @@
 package cn.pinkhorizon.commons.base.enums;
 
-import cn.pinkhorizon.commons.base.exception.ParamInvalidException;
+import cn.pinkhorizon.commons.base.exception.ParamAnomalousException;
 
 /**
  * @author yuanlei7
@@ -43,6 +43,6 @@ public enum Sort {
                 return e;
             }
         }
-        throw new ParamInvalidException("invalid enum type for " + Sort.class + "：" + type);
+        throw new ParamAnomalousException("anomalous enum type for " + Sort.class + "：" + type);
     }
 }
